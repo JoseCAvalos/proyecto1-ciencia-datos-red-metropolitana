@@ -1,0 +1,8 @@
+metrica,conteo
+INSERT,10800
+UPDATE,16200
+DELETE,4050
+llaves_distintas,22463
+usuarios_activos_finales,19469
+usuarios_inactivos_finales,2994
+eventos_sin_tarjeta,2206

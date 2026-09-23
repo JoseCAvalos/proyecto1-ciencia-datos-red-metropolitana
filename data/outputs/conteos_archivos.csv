@@ -1,0 +1,10 @@
+archivo,filas,via_ingesta
+tm_estaciones.csv,104,Batch
+tu_paradas.csv,328,Batch
+mr_estaciones.csv,22,Batch
+am_estaciones.csv,14,Batch
+transmetro_validaciones.csv,363221,Kafka
+transurbano_transacciones.csv,832791,Batch
+metroriel_viajes.jsonl,299100,Batch
+aerometro_boardings.csv,203554,Kafka
+cdc_padron_usuarios.csv,31050,CDC
