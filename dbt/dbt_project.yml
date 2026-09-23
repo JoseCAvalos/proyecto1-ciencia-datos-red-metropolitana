@@ -1,0 +1,18 @@
+name: red_metropolitana
+version: '1.0'
+config-version: 2
+profile: red_metropolitana
+model-paths: ["models"]
+test-paths: ["tests"]
+clean-targets: ["target","dbt_packages"]
+
+models:
+  red_metropolitana:
+    staging:
+      +materialized: ephemeral
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table
+    audit:
+      +materialized: table

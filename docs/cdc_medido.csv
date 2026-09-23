@@ -1,0 +1,8 @@
+﻿metrica,valor
+operaciones_insert,10800
+operaciones_update,16200
+operaciones_delete,4050
+llaves_distintas_en_cdc,22463
+estado_final_activo,19469
+estado_final_inactivo,2994
+eventos_sin_tarjeta,2206

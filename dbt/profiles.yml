@@ -1,0 +1,7 @@
+red_metropolitana:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/outputs/red_metropolitana.duckdb
+      threads: 4

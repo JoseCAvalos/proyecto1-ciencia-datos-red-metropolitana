@@ -1,0 +1,1 @@
+select * from read_csv_auto('data/bronze/ingestion_date=*/cdc_padron_usuarios.csv', header=true, all_varchar=true, union_by_name=true)

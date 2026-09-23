@@ -1,0 +1,1 @@
+select * from read_csv_auto('data/bronze/ingestion_date=*/transurbano_transacciones.csv', header=true, all_varchar=true, union_by_name=true)

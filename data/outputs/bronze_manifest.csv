@@ -1,0 +1,8 @@
+﻿archivo,sha256,filas,ingestion_ts,ruta_bronze,via
+tm_estaciones.csv,4d53a95abb4f115b7da7f69db2c392e1748d6704807d81408a5e510f791624d0,104,2026-09-22T12:47:13.869232+00:00,data/bronze/ingestion_date=2026-09-22/tm_estaciones.csv,BATCH
+tu_paradas.csv,a888a09c45189cfeac0a0577377d1b4c662923ee55f798d961f418aa2ac93b90,328,2026-09-22T12:47:13.870249+00:00,data/bronze/ingestion_date=2026-09-22/tu_paradas.csv,BATCH
+mr_estaciones.csv,c302ffbc6f0bdcf926c8eaaf9a5427ec5d38d482cc44431e3aeb20a8febb8e8c,22,2026-09-22T12:47:13.870855+00:00,data/bronze/ingestion_date=2026-09-22/mr_estaciones.csv,BATCH
+am_estaciones.csv,e3acbeed8608fb9a6b9a8df87646bf5294e644aa64bd95484f1424b92ae21723,14,2026-09-22T12:47:13.871420+00:00,data/bronze/ingestion_date=2026-09-22/am_estaciones.csv,BATCH
+transurbano_transacciones.csv,8ce5028499b7b6c7274fd838430e87d373065d377e5ec1f062a4fa6497083fad,832791,2026-09-22T12:47:14.266146+00:00,data/bronze/ingestion_date=2026-09-22/transurbano_transacciones.csv,BATCH
+metroriel_viajes.jsonl,23feb4a3a55ce506bf34de5faf7834f9c390b7ca70499cc9fb3ec1c3650ebede,299100,2026-09-22T12:47:14.340386+00:00,data/bronze/ingestion_date=2026-09-22/metroriel_viajes.jsonl,BATCH
+cdc_padron_usuarios.csv,68e4d9dd258809dd4a45a0c5f9023ad6f3b5d32912e4447b9d20b9a7258de5c4,31050,2026-09-22T12:47:14.363685+00:00,data/bronze/ingestion_date=2026-09-22/cdc_padron_usuarios.csv,CDC

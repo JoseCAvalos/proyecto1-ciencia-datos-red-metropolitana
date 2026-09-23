@@ -1,0 +1,10 @@
+Hallazgos relevantes del generador entregado:
+- ESCALA = 0.08; DIAS = 45; N_USUARIOS = 60,000; SEMILLA = 2026.
+- Transmetro duplica aproximadamente 0.3% de lecturas.
+- Transurbano inyecta ~0.5% de filas sin parada y ~0.1% con fecha +400 días.
+- MetroRiel inyecta ~1.2% de viajes sin salida.
+- Aerómetro guarda UTC y Guatemala se construye como UTC-6.
+- El CDC mezcla deliberadamente formatos TM/TU/MR en la columna `tarjeta`.
+- No se usa la fórmula interna del generador para revertir hashes de Aerómetro: hacerlo resolvería artificialmente una identidad que el escenario declara no disponible.
+
+- En Transurbano hay 3 registros que simultáneamente tienen parada nula y fecha futura; el modelo conserva ambos motivos en la misma fila de cuarentena.

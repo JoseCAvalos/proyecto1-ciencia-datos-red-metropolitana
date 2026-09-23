@@ -1,0 +1,3 @@
+﻿Proceso/Hecho,DimUsuario,DimTiempo,DimZona,DimModo,DimEstacionParada,DimRuta,Grano
+FactAbordaje,X,X,X,X,X,X,"Un abordaje/validación exitosa de TM, TU o Aerómetro"
+FactViajeMetroRiel,X,X,X,X,X,,Un viaje completo de MetroRiel con origen y destino

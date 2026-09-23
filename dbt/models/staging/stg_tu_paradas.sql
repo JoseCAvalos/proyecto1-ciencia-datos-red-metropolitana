@@ -1,0 +1,1 @@
+select * from read_csv_auto('data/bronze/ingestion_date=*/tu_paradas.csv', header=true, union_by_name=true)

@@ -1,0 +1,15 @@
+flowchart LR
+  TM[Transmetro CSV] --> K[Kafka]
+  AM[Aerómetro CSV] --> K
+  TU[Transurbano CSV] --> BATCH[Batch]
+  CAT[4 catálogos] --> BATCH
+  MR[MetroRiel JSONL] --> BATCH
+  CDC[CDC padrón] --> CDCLOAD[CDC]
+  K --> BR[Bronze Lake]
+  BATCH --> BR
+  CDCLOAD --> BR
+  BR --> STG[Staging ephemeral]
+  STG --> SV[Silver integrado]
+  SV --> Q[Cuarentena]
+  SV --> G[Gold dimensional]
+  G --> T[Tableau - Fase 2]

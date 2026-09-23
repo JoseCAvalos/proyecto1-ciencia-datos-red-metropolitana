@@ -1,0 +1,12 @@
+﻿Tabla,Campo,Definición,Origen/transformación
+dim_usuario,usuario_pseudo,Identificador seudonimizado,SHA-256(sal + identidad canónica)
+dim_usuario,perfil,Perfil más reciente cuando CDC lo conoce,silver_padron_scd2
+dim_usuario,zona_residencia,Zona residencial más reciente,silver_padron_scd2
+dim_tiempo,es_dia_habil,Lunes a viernes,Derivado de timestamp
+dim_tiempo,es_hora_pico,06-08 o 16-19,Derivado de timestamp
+dim_zona,zona_nombre,Zona conformada,Catálogos Silver
+fact_abordaje,monto_q,Monto normalizado en quetzales,TM/TU/AM Silver
+fact_abordaje,conteo_abordaje,1 por abordaje exitoso,Constante
+fact_viaje_metroriel,monto_q,Tarifa del viaje,MetroRiel Silver
+fact_viaje_metroriel,duration_s,Duración en segundos,MetroRiel Silver
+fact_viaje_metroriel,conteo_viaje,1 por viaje válido,Constante

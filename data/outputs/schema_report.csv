@@ -1,0 +1,10 @@
+﻿archivo,estado,filas,columnas
+tm_estaciones.csv,OK,104,estacion_id | nombre | linea | zona | lat | lon
+tu_paradas.csv,OK,328,cod_parada | descripcion | ruta | sector
+mr_estaciones.csv,OK,22,id_estacion | nombre_estacion | zona_nombre | km
+am_estaciones.csv,OK,14,station_code | station_name | axis | district
+transmetro_validaciones.csv,OK,363221,validacion_id | tarjeta | estacion_id | linea | fecha_hora | tarifa | tipo
+transurbano_transacciones.csv,OK,832791,fecha | hora | num_tarjeta | cod_parada | ruta | monto_centavos | cod_estado
+metroriel_viajes.jsonl,OK,299100,trip_id | card | fare_gtq | duration_s | entry_station | entry_ts | exit_station | exit_ts | exit
+aerometro_boardings.csv,OK,203554,boarding_id | user_hash | station_code | axis | timestamp_utc | cabin_number | fare
+cdc_padron_usuarios.csv,OK,31050,seq | commit_ts | op | tarjeta | perfil | zona_residencia | estado

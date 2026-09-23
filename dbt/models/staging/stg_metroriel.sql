@@ -1,0 +1,1 @@
+select * from read_json_auto('data/bronze/ingestion_date=*/metroriel_viajes.jsonl', format='newline_delimited', union_by_name=true)

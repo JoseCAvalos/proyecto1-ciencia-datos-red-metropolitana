@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: fact_abordaje
+    columns:
+      - name: evento_uid
+        tests: [unique, not_null]
+  - name: fact_viaje_metroriel
+    columns:
+      - name: viaje_uid
+        tests: [unique, not_null]
+  - name: dim_usuario
+    columns:
+      - name: usuario_pseudo
+        tests: [unique, not_null]
+  - name: dim_estacion_parada
+    columns:
+      - name: estacion_parada_sk
+        tests: [unique, not_null]
