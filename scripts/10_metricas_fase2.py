@@ -49,6 +49,26 @@ for row in con.execute("""
 """).fetchall():
     print(row)
 
+print("\nTop horas:")
+for row in con.execute("""
+    select hora, sum(cantidad) demanda
+    from mart_demanda_dashboard
+    where hora is not null
+    group by 1
+    order by demanda desc
+    limit 10
+""").fetchall():
+    print(row)
+
+print("\nZonas sin servicio:")
+for row in con.execute("""
+    select zona_nombre, usuarios_residentes
+    from mart_cobertura_zona
+    where not tiene_servicio
+    order by usuarios_residentes desc
+""").fetchall():
+    print(row)
+
 print("\nZonas MetroRiel:")
 for row in con.execute("""
     select zona_nombre, demanda_total, usuarios_distintos,
