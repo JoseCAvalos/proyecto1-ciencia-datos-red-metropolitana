@@ -7,6 +7,7 @@ DB = Path("data/outputs/red_metropolitana.duckdb")
 OUT = Path("data/outputs/fase2")
 OUT.mkdir(parents=True, exist_ok=True)
 SALIDA = OUT / "metricas_fase2.csv"
+SALIDA_ALMACENAMIENTO = OUT / "almacenamiento_fase2.csv"
 
 if not DB.exists():
     raise SystemExit(f"No existe la base DuckDB: {DB}")
@@ -83,5 +84,23 @@ with open(SALIDA,"w",newline="",encoding="utf-8") as f:
     w.writerow(["metrica","valor","tiempo_consulta_ms"])
     w.writerows(filas)
 
+artefactos = [DB, OUT]
+artefactos.extend(sorted(OUT.glob("*.csv")))
+
+with open(SALIDA_ALMACENAMIENTO,"w",newline="",encoding="utf-8") as f:
+    w=csv.writer(f)
+    w.writerow(["artefacto","tipo","bytes","mb"])
+    for path in artefactos:
+        if not path.exists():
+            continue
+        if path.is_dir():
+            bytes_total = sum(p.stat().st_size for p in path.rglob("*") if p.is_file())
+            tipo = "directorio"
+        else:
+            bytes_total = path.stat().st_size
+            tipo = "archivo"
+        w.writerow([path.as_posix(), tipo, bytes_total, round(bytes_total / (1024 * 1024), 3)])
+
 con.close()
 print(f"\nMétricas guardadas en: {SALIDA}")
+print(f"Almacenamiento guardado en: {SALIDA_ALMACENAMIENTO}")

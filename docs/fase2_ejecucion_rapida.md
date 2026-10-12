@@ -48,6 +48,7 @@ Archivos principales:
 - mart_metroriel_zonas.csv
 - features_usuario.csv
 - metricas_fase2.csv
+- almacenamiento_fase2.csv
 
 ## 5. Tableau
 
@@ -98,3 +99,4 @@ Antes de entregar confirmar:
 - Features tiene una fila por usuario y fecha de corte declarada.
 - No existen credenciales en Git.
 - El tablero puede rastrearse hasta Gold y de Gold hacia Silver/Bronze mediante dbt.
+- No existen duplicados de zona por capitalización en `silver_estaciones_paradas`, `silver_padron_scd2`, Gold ni marts.

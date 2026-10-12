@@ -37,3 +37,5 @@ La prioridad no debería ser ampliar indiscriminadamente la infraestructura dond
 ## Limitaciones
 
 La identidad entre Transmetro, Transurbano y MetroRiel se aproxima mediante el componente numérico de sus llaves. Aerómetro permanece separado porque entrega un hash sin tabla de correspondencia. Por ello, el porcentaje de usuarios multimodales puede estar subestimado cuando Aerómetro participa.
+
+Las cifras deben recalcularse después de cambios en Silver, especialmente cuando se ajusta la normalización de zonas. La recomendación final debe usar únicamente valores producidos por `scripts/10_metricas_fase2.py` y el tablero actualizado.

@@ -34,6 +34,10 @@
 
 **Fecha de corte:** timestamp máximo observado en eventos válidos.
 
+**Normalización de zonas:** se agrega macro dbt `normalizar_zona` y se aplica en estaciones/paradas y padrón Silver para evitar dimensiones duplicadas por diferencias de mayúsculas/minúsculas. Esto protege `dim_zona`, `dim_estacion_parada`, `mart_cobertura_zona`, `mart_metroriel_zonas` y `features_usuario`.
+
+**Métricas locales:** los tamaños de DuckDB/CSV y tiempos de consulta se miden con `scripts/10_metricas_fase2.py`. No se registran valores inventados cuando el archivo local de base de datos no está disponible.
+
 ## Seguridad
 
 **Seudonimización:** SHA-256 más `PSEUDONYM_SALT` antes de Gold.

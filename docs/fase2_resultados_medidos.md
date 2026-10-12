@@ -7,6 +7,8 @@
 - Tiempo de construcción de modelos: **1.16 s**
 - Tiempo de tests: **0.16 s**
 
+Nota de auditoría: después de la normalización de zonas en Silver, estos valores deben recalcularse localmente con `dbt run`, `dbt test`, `scripts/09_exportar_fase2.py` y `scripts/10_metricas_fase2.py`. No se actualizan aquí sin ejecutar el entorno local con `red_metropolitana.duckdb`.
+
 ## Volúmenes exportados
 
 | Dataset | Filas |
@@ -75,6 +77,21 @@
 ## Cobertura faltante
 
 La única zona residencial sin servicio de ningún modo es **Santa Catarina Pinula**, con **1,031 usuarios residentes** observados.
+
+## Rendimiento y almacenamiento
+
+Los tiempos de consulta y tamaños de artefactos se generan con:
+
+```bash
+python scripts/10_metricas_fase2.py
+```
+
+Salidas esperadas:
+
+- `data/outputs/fase2/metricas_fase2.csv`
+- `data/outputs/fase2/almacenamiento_fase2.csv`
+
+Estos valores no deben transcribirse si no fueron medidos en la máquina local de entrega.
 
 ## Conclusión técnica
 

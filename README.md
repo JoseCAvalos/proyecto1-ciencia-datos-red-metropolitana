@@ -139,6 +139,8 @@ Incluye:
 
 Los registros inválidos no se eliminan silenciosamente. Se conservan en cuarentena con motivo de rechazo.
 
+Las zonas se normalizan en Silver con una macro dbt compartida para evitar duplicados por capitalización, por ejemplo `Mixco/MIXCO`, `Villa Nueva/VILLA NUEVA` y `San Miguel Petapa/SAN MIGUEL PETAPA`. La prueba `assert_zonas_normalizadas` protege este criterio.
+
 ## Identidad
 
 Transmetro, Transurbano y MetroRiel aproximan una identidad común mediante el componente numérico de sus llaves. Aerómetro permanece separado porque entrega un hash sin tabla de correspondencia.
@@ -185,3 +187,4 @@ Los documentos principales están en `docs/`, incluyendo:
 - diccionario Gold;
 - gobernanza y seguridad;
 - bitácora de decisiones.
+- guía de métricas locales de rendimiento y almacenamiento.
