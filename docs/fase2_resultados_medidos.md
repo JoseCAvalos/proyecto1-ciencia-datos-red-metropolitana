@@ -62,6 +62,20 @@
 | Zona 6 | 138,899 | 32,556 | 5 | Sí |
 | Zona 1 | 137,170 | 40,911 | 4 | Sí |
 
+## Demanda por hora
+
+| Hora | Demanda |
+|---:|---:|
+| 07:00 | 197,491 |
+| 17:00 | 167,251 |
+| 18:00 | 139,136 |
+| 06:00 | 132,023 |
+| 08:00 | 99,271 |
+
+## Cobertura faltante
+
+La única zona residencial sin servicio de ningún modo es **Santa Catarina Pinula**, con **1,031 usuarios residentes** observados.
+
 ## Conclusión técnica
 
 Las zonas objetivo de MetroRiel coinciden con las cinco zonas de mayor demanda observada en el dataset preparado para Tableau. La red cubre 15 de 16 zonas residenciales analizadas, y 16,849 usuarios muestran uso multimodal observable.
