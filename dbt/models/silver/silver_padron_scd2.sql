@@ -6,7 +6,7 @@ with c as (
    upper(op) op,
    tarjeta,
    nullif(perfil,'') perfil,
-   nullif(zona_residencia,'') zona_residencia,
+   {{ normalizar_zona('zona_residencia') }} zona_residencia,
    nullif(estado,'') estado,
    case
      when regexp_matches(tarjeta,'^TC-[0-9]+$') then 'TM'
