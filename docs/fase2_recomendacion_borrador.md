@@ -38,4 +38,4 @@ La prioridad no debería ser ampliar indiscriminadamente la infraestructura dond
 
 La identidad entre Transmetro, Transurbano y MetroRiel se aproxima mediante el componente numérico de sus llaves. Aerómetro permanece separado porque entrega un hash sin tabla de correspondencia. Por ello, el porcentaje de usuarios multimodales puede estar subestimado cuando Aerómetro participa.
 
-Las cifras deben recalcularse después de cambios en Silver, especialmente cuando se ajusta la normalización de zonas. La recomendación final debe usar únicamente valores producidos por `scripts/10_metricas_fase2.py` y el tablero actualizado.
+Las cifras fueron recalculadas localmente después de la normalización de zonas y coinciden con la salida aportada de `scripts/10_metricas_fase2.py`; las 20 pruebas dbt pasaron. La actualización y revisión visual del tablero con las nuevas exportaciones sigue pendiente. Cualquier cambio posterior en Silver requiere recalcular estos indicadores.

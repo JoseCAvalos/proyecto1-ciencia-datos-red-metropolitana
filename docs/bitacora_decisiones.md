@@ -38,6 +38,8 @@
 
 **Métricas locales:** los tamaños de DuckDB/CSV y tiempos de consulta se miden con `scripts/10_metricas_fase2.py`. No se registran valores inventados cuando el archivo local de base de datos no está disponible.
 
+**Validación posterior a la normalización:** el responsable aportó la salida local posterior a actualizar a `a344a92`: 19 modelos correctos en 3.19 s y 20 tests aprobados en 0.31 s, incluido `assert_zonas_normalizadas`. Se regeneraron las cinco exportaciones y se incorporaron las mediciones reportadas en `fase2_resultados_medidos.md`: DuckDB de 314,585,088 bytes y directorio Fase 2 de 185,567,299 bytes. La demanda consolidada de Mixco es 132,768 y la de Villa Nueva, 93,005. Quedan pendientes la revisión de Tableau y la confirmación de las evidencias finales; no se hizo merge a `main`.
+
 ## Seguridad
 
 **Seudonimización:** SHA-256 más `PSEUDONYM_SALT` antes de Gold.
