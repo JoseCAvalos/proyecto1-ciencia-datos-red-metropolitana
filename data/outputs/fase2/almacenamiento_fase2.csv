@@ -1,0 +1,10 @@
+artefacto,tipo,bytes,mb
+data/outputs/red_metropolitana.duckdb,archivo,312225792,297.762
+data/outputs/fase2,directorio,185567209,176.971
+data/outputs/fase2/almacenamiento_fase2.csv,archivo,0,0.0
+data/outputs/fase2/features_usuario.csv,archivo,8687478,8.285
+data/outputs/fase2/mart_cobertura_zona.csv,archivo,684,0.001
+data/outputs/fase2/mart_demanda_dashboard.csv,archivo,175712956,167.573
+data/outputs/fase2/mart_metroriel_zonas.csv,archivo,226,0.0
+data/outputs/fase2/mart_transbordo_usuario.csv,archivo,1165664,1.112
+data/outputs/fase2/metricas_fase2.csv,archivo,201,0.0
