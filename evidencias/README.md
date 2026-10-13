@@ -13,4 +13,3 @@
 11. `python scripts/06_prueba_idempotencia.py`, mostrando `IDEMPOTENCIA: OK`.
 12. Captura de las tablas de Gold en DuckDB (opcional si el profesor solicita evidencia visual adicional).
 
-No edites los conteos para que coincidan: si difieren, revisa la causa.

@@ -9,3 +9,4 @@ data/input/*
 data/bronze/*
 data/outputs/*.duckdb
 .DS_Store
+data/outputs/fase2/mart_demanda_dashboard.csv

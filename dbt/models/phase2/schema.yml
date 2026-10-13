@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: mart_demanda_dashboard
+    description: "Dataset Gold unificado para Tableau."
+    columns:
+      - name: evento_id
+        tests: [unique, not_null]
+
+  - name: mart_cobertura_zona
+    description: "Cobertura por zona."
+    columns:
+      - name: zona_nombre
+        tests: [unique, not_null]
+
+  - name: mart_transbordo_usuario
+    description: "Uso multimodal por usuario."
+    columns:
+      - name: usuario_sk
+        tests: [unique, not_null]
+
+  - name: mart_metroriel_zonas
+    description: "Demanda y cobertura MetroRiel en zonas 1, 6, 8, 12 y 17."
+    columns:
+      - name: zona_nombre
+        tests: [unique, not_null]
+
+  - name: features_usuario
+    description: "Features por usuario construidas exclusivamente desde Silver."
+    columns:
+      - name: usuario_pseudo
+        tests: [unique, not_null]
+      - name: fecha_corte
+        tests: [not_null]

@@ -1,0 +1,6 @@
+metrica,valor,tiempo_consulta_ms
+demanda_total_red,1647569,0.688
+usuarios_multimodales,16849,0.401
+usuarios_con_modo_registrado,64224,0.127
+zonas_sin_servicio,1,0.186
+zonas_con_servicio,15,0.126
