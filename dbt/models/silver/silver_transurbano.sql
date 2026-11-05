@@ -19,7 +19,7 @@ with x as (
 select
  source_event_id,
  user_key_raw,
- 'N:' || lpad(regexp_extract(user_key_raw,'[0-9]+'),8,'0') usuario_canonico,
+ {{ normalizar_usuario('user_key_raw') }} AS usuario_canonico,
  cod_parada punto_codigo,
  ruta,
  event_ts_local,

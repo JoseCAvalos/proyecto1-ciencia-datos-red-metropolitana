@@ -7,7 +7,7 @@ with src as (
 select
  cast(validacion_id as bigint) source_event_id,
  cast(tarjeta as varchar) user_key_raw,
- 'N:' || lpad(regexp_extract(cast(tarjeta as varchar),'[0-9]+'),8,'0') usuario_canonico,
+ {{ normalizar_usuario('tarjeta') }} AS usuario_canonico,
  cast(estacion_id as varchar) punto_codigo,
  cast(linea as varchar) ruta,
  cast(fecha_hora as timestamp) event_ts_local,

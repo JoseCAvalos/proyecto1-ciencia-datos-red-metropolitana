@@ -2,7 +2,7 @@
 select
  cast(trip_id as bigint) source_event_id,
  cast(card as varchar) user_key_raw,
- 'N:' || lpad(regexp_extract(cast(card as varchar),'[0-9]+'),8,'0') usuario_canonico,
+ {{ normalizar_usuario('card') }} AS usuario_canonico,
  cast(entry.station as varchar) origen_codigo,
  cast("exit".station as varchar) destino_codigo,
  cast(entry.ts as timestamp) salida_ts_local,

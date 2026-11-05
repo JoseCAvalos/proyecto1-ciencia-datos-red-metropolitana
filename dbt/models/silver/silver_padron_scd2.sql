@@ -14,11 +14,13 @@ with c as (
      when regexp_matches(tarjeta,'^MR[0-9]+$') then 'MR'
      when tarjeta='SIN-TARJETA' then 'SIN_LLAVE'
      else 'OTRO' end formato_llave,
-   case
-     when regexp_matches(tarjeta,'^TC-[0-9]+$') then 'N:' || lpad(regexp_extract(tarjeta,'[0-9]+'),8,'0')
-     when regexp_matches(tarjeta,'^[0-9]{10}$') then 'N:' || lpad(regexp_extract(tarjeta,'[0-9]+'),8,'0')
-     when regexp_matches(tarjeta,'^MR[0-9]+$') then 'N:' || lpad(regexp_extract(tarjeta,'[0-9]+'),8,'0')
-     else null end usuario_canonico
+    CASE
+        WHEN regexp_matches(tarjeta, '^TC-[0-9]+$')
+          OR regexp_matches(tarjeta, '^[0-9]{10}$')
+          OR regexp_matches(tarjeta, '^MR[0-9]+$')
+        THEN {{ normalizar_usuario('tarjeta') }}
+        ELSE NULL
+    END AS usuario_canonico
  from {{ ref('stg_cdc') }}
 ), h as (
  select *,
