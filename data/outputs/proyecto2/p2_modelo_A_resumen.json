@@ -1,0 +1,37 @@
+{
+  "corte_entrenamiento": "A",
+  "tamano_A": 59505,
+  "positivos_A": 7110,
+  "prevalencia_A": 0.11948575749936981,
+  "folds": 5,
+  "random_state": 2026,
+  "seleccion": {
+    "modelo": "l1",
+    "lambda": "1.0",
+    "ap_media": 0.4154009667353976,
+    "ap_desv": 0.011593452432021123
+  },
+  "top_5_coeficientes": [
+    [
+      "num__viajes_7d",
+      -0.8398598410772401
+    ],
+    [
+      "num__dias_desde_ultimo_viaje",
+      0.7539910277872425
+    ],
+    [
+      "cat__zona_origen_mas_frecuente_Zona 13",
+      0.49776556066309013
+    ],
+    [
+      "cat__zona_origen_mas_frecuente_Zona 10",
+      0.46886328334761934
+    ],
+    [
+      "num__viajes_28d",
+      -0.31478333801140934
+    ]
+  ],
+  "advertencia": "B reservado. Resultados condicionados a identidad y CDC."
+}
