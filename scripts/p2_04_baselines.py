@@ -44,7 +44,8 @@ def modelo(penalizacion, c):
     return Pipeline([
         ("pre", pre),
         ("lr", LogisticRegression(
-            penalty=penalizacion, C=c, solver="liblinear",
+            l1_ratio=1.0 if penalizacion == "l1" else 0.0,
+            C=c, solver="liblinear",
             max_iter=1500, random_state=2026,
         )),
     ])
